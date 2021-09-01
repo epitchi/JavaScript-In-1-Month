@@ -1,12 +1,14 @@
 # Huỷ diệt JavaScript với một tháng
 
-JavaScript Basic ✔
-HTML for Dummies
-Git
-UI Design
-Master CSS
-Boostrap 4
-NodeJS Web Server using Express
-JavaScript Advanced
-Reactjs
+To-do List
+
+JavaScript Basic ✔ <br>
+HTML for Dummies <br>
+Git <br>
+UI Design <br>
+Master CSS <br>
+Boostrap 4 <br>
+NodeJS Web Server using <br> Express <br>
+JavaScript Advanced <br>
+Reactjs <br>
 React Native
