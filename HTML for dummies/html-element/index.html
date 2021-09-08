@@ -1,0 +1,41 @@
+<!--
+HTMLElement
+  .children (ELement)
+  .textContent (None)
+
+  .appendChild() (None)
+  .remove() (Element)
+
+document.createElement
+
+
+  trick in chrome devTools: $0 is select element
+  can using anything in node becuz it $0 similar element
+ -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TODO List</title>
+  </head>
+  <body>
+    <h1>TODO list</h1>
+
+    <ul id="todo-list">
+      <li>Haircut</li>
+      <li>Lunch with Sora</li>
+      <li>Dinner with Maria</li>
+    </ul>
+
+    <script type="text/javascript">
+      //insert a new todo to the list
+      var newTodoList = document.createElement('ul');
+      var newTodo = document.createElement('li');
+      newTodo.textContent = 'Beo';
+      newTodoList.appendChild(newTodo);
+      newTodo.textContent = 'Khong beo';
+      newTodoList.appendChild(newTodo);
+
+    </script>
+  </body>
+</html>
