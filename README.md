@@ -3,7 +3,7 @@
 To-do List
 
 JavaScript Basic ✔ <br>
-HTML for Dummies <br>
+HTML for Dummies ✔ <br>
 Git <br>
 UI Design <br>
 Master CSS <br>
