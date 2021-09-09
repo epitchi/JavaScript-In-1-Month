@@ -1,3 +1,4 @@
+<!-- debug, call stack, breakpoints
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -12,15 +13,15 @@
       <li>Have a walk</li>
       <li>Go to bed</li> -->
     </ul>
-
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="text/javascript">
-      var url = 'http://localhost:9081/todos';
-      axios.get(url).then(function(res){
-        var items = res.data;
-        render(items);
-      });
-
+      var storageKey = 'todoList';
+      var dataString = localStorage.getItem(storageKey);
+      var todoList;
+      if (dataString){
+        todoList = JSON.parse(dataString);
+      } else {
+        todoList = [];
+      }
       var addBtn = document.getElementById('add-btn');
       // addBtn.onclick = addItem;
       addBtn.addEventListener('click', addItem);
@@ -46,10 +47,10 @@
         localStorage.setItem(storageKey, JSON.stringify(todoList));
       }
 
-      function render(items){
+      function render(){
         var htmlList = document.getElementById('todo-list');
-        var content = items.map(function(item){
-          return `<li> ${item.content} </li>`;
+        var content = todoList.map(function(item){
+          return `<li> ${item} </li>`;
         });
 
         htmlList.innerHTML = content.join('');
