@@ -1,0 +1,63 @@
+<!-- $0.addEventListener (Observer design pattern) -->
+<!-- Desgin patterns, Observer design pattern -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TODO list</title>
+  </head>
+  <body>
+    <input type="text" id="new-item">
+    <button id="add-btn">Add</button>
+    <ul id="todo-list">
+      <!-- <li>Take shower</li>
+      <li>Have a walk</li>
+      <li>Go to bed</li> -->
+    </ul>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript">
+      var url = 'http://localhost:9081/todos';
+      axios.get(url).then(function(res){
+        var items = res.data;
+        render(items);
+      });
+
+      var addBtn = document.getElementById('add-btn');
+      // addBtn.onclick = addItem;
+      addBtn.addEventListener('click', addItem);
+      addBtn.addEventListener('click', function(){
+        console.log('Add Button is clicked');
+      });
+      // listerners {'click': [addItem, func]}
+      // addBtn triggers a click event
+      // a click event is triggered
+      // event listener
+
+      function addItem(){
+        // get value of the input
+        var input = document.getElementById('new-item');
+        var newItem = input.value;
+        // add to todoList adrray
+        todoList.push(newItem);
+        // re-render
+        render();
+        // clear input
+        input.value = '';
+        // store data
+        localStorage.setItem(storageKey, JSON.stringify(todoList));
+      }
+
+      function render(items){
+        var htmlList = document.getElementById('todo-list');
+        var content = items.map(function(item){
+          return `<li> ${item.content} </li>`;
+        });
+
+        htmlList.innerHTML = content.join('');
+      }
+      render();
+      // CLI -> command line interface -> web interface
+    </script>
+  </body>
+</html>
