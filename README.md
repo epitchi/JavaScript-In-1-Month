@@ -4,7 +4,7 @@ To-do List
 
 JavaScript Basic ✔ <br>
 HTML for Dummies ✔ <br>
-Git <br>
+Git ✔ https://github.com/epitchi/Learn-Git<br>
 UI Design <br>
 Master CSS <br>
 Boostrap 4 <br>
