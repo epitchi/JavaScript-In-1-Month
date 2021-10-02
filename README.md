@@ -5,7 +5,7 @@ To-do List
 JavaScript Basic ✔ <br>
 HTML for Dummies ✔ <br>
 Git ✔ https://github.com/epitchi/Learn-Git<br>
-UI Design <br>
+UI Design ✔ <br>
 Master CSS <br>
 Boostrap 4 <br>
 NodeJS Web Server using <br> Express <br>
